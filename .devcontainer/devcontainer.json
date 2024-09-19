@@ -1,0 +1,37 @@
+{
+    "name": "Python 3 Flask",
+    "image": "mcr.microsoft.com/devcontainers/python:0-3.11",
+    "postCreateCommand": "pip install -r requirements.txt",
+    "forwardPorts": [5000],
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-python.python",
+                "ms-python.vscode-pylance",
+                "ms-python.black-formatter",
+                "ms-toolsai.jupyter",
+                "njpwerner.autodocstring",
+                "streetsidesoftware.code-spell-checker"
+            ],
+            "settings": {
+                "python.defaultInterpreterPath": "/usr/local/bin/python",
+                "python.linting.enabled": true,
+                "python.linting.pylintEnabled": true,
+                "python.formatting.provider": "black",
+                "editor.formatOnSave": true,
+                "editor.codeActionsOnSave": {
+                    "source.organizeImports": true
+                },
+                "files.exclude": {
+                    "**/.git": true,
+                    "**/.svn": true,
+                    "**/.hg": true,
+                    "**/CVS": true,
+                    "**/.DS_Store": true,
+                    "**/*.pyc": true,
+                    "**/__pycache__": true
+                }
+            }
+        }
+    }
+}
